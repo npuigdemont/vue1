@@ -1,12 +1,20 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
+import Escena from '.Escena.vue'
 </script>
 
-<template>
+<template id="Home">
 <div>
- <p>El nostre heroi estava surant per l'espai sideral quan a la llunyania va albirar una nau espacial.</p>
+  <ul>
+    <li v-for="(text, index) in textos" :key="index">
+      {{text.nom}}
+    </li>
+  </ul>
+<div v-if="mostrar">
+  {{missatge}}
+</div>
+<button @click="ensenya()">Ensenya</button>
 </div>
 </template>
 
