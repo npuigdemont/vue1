@@ -1,22 +1,28 @@
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import Escena from './components/Escena.vue'
-</script>
-
-<template id="Home">
+<template>
 <div>
-  <ul>
-    <li v-for="(text, index) in textos" :key="index">
-      {{text.nom}}
-    </li>
-  </ul>
-<div v-if="mostrar">
-  {{missatge}}
-</div>
-<button @click="ensenya()">Ensenya</button>
+ 
+  <Home />
+  
+
 </div>
 </template>
+
+<script>
+
+
+import Home from './components/Home.vue'
+
+
+ export default {
+   components: {
+     'Home': Home,
+   }, 
+   name: 'App'
+ }
+
+</script>
+
+
 
 <style>
 #app {

@@ -1,21 +1,46 @@
-const Escena = new Vue ({
-    el: '#app',
-    template: '#Home',
-    data: {
-        textos: [
-            {nom: "El nostre heroi estava surant per l'espai sideral quan a la llunyania va albirar una nau espacial"}
-            {nom: "Sentia curiositat per l'interior de la nau i es va posar a inspeccionar-la. Va arribar a una sala amb dues portes."}
-            {nom: "L'heroi va decidir travessar la porta que el portava a casa"}
-            {nom: "Mentrestant, altres heroes no van tenir tanta sort en la seva elecció ..."}
-        ],
-        mostrar: true,
-        missatge: "Funciona!"
-    },
-    methods: {
-        ensenya: function(){
-            this.mostrar = !this.mostar
-        }
+
+
+<template>
+<div class="escena justify-content-center">
+  {{msg}}
+ </div>
+  </template>
+
+<script>
+export default {
+    data(){return{};},
+    name: "Escena", 
+    props: {
+        msg: Object
     }
+};
+
+</script>
+
+<style scoped>
+    h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+.escena
+{
+margin: 25px;
+border: 1px solid #000000;
+border-radius: 20px;
+padding: 10px;
+background: rgba(247, 241, 241, 0.95);
+}
+
+</style>
 
 
-})
