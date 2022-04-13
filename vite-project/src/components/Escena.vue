@@ -11,7 +11,8 @@ export default {
     data(){return{};},
     name: "Escena", 
     props: {
-        msg: Object
+        msg: String,
+        itemActiu: Number
     }
 };
 

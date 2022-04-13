@@ -1,10 +1,10 @@
 <template>
   <div class="botons">
-    <div class='d-grid gap-2'>
+    <div class="btn-group btn-group-lg" role="group">
     
-            <button class='btn btn-secondary btn-lg mx-auto' @click="clickAnterior">Anterior</button>
+            <button class="btn col-md-6 btn-secondary btn-lg btn-block" @click="clickAnterior">Anterior</button>
         
-            <button class='btn btn-secondary btn-lg mx-auto' @click="clickSeguent">Següent</button>
+            <button class="btn col-md-6 btn-secondary btn-lg btn-block" @click="clickSeguent">Següent</button>
        
     </div>
   </div>
@@ -40,8 +40,9 @@ export default {
 </script>
 
 <style scoped>
-.botons {
-    background: rgba(97, 89, 96, 0.95);
+button{
+    height: 60px;
+    width: 600px;
 }
 
 </style>
