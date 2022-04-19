@@ -8,10 +8,11 @@
         <p>Clicant al botó de continuar podeu accedir al contingut de la història.</p>
      <button type="button" class="btn btn-outline-info" v-on:click="isHidden = !isHidden">{{ isHidden === true ? "Mostrar" : "Amaga" }}</button>
 <br>
-
-
-    <botons @canviaFrase ="canviaFrase"></botons>
+<Toggle v-model="value" />
+<br>
 <div v-if="!isHidden">
+    <botons @canviaFrase ="canviaFrase"></botons>
+
   <Escena :msg="text" v-for="(text, index) in textos"
   :key="index"
   :text="text"
@@ -28,17 +29,18 @@
 <script>
     import Botons from './botons.vue';
     import Escena from './Escena.vue';
-    
+    import Toogle from '@vueform/toggle'
 
 export default {
     components: {
         Escena,
         Botons,
-       
+       Toogle
     },
     name: "Home",
     data() {
         return {
+            value: true,
             num: 0,
             activeItem: 0,
             textos: [
@@ -47,7 +49,6 @@ export default {
             "L'heroi va decidir travessar la porta que el portava a casa",
             "Mentrestant, altres herois no van tenir tanta sort en la seva elecció ..."
             ],
-            mostrar: false,
             isHidden: false
             
         }
@@ -73,6 +74,9 @@ button {
     margin: 2%;
     padding: 2%;
  
+}
+Toogle {
+    src:"@vueform/toggle/themes/default.css"
 }
 </style>
   
