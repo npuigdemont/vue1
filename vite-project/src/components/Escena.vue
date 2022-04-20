@@ -3,6 +3,7 @@
 <template>
 <div class="escena justify-content-center">
   {{msg}}
+ 
  </div>
   </template>
 
